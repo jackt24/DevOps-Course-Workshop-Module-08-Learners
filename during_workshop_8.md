@@ -1,4 +1,4 @@
-# Workshop 8 Instructions
+docker pull mcr.microsoft.com/dotnet/sdk:5.0# Workshop 8 Instructions
 
 ## Part 1 (Publish to Docker Hub)
 

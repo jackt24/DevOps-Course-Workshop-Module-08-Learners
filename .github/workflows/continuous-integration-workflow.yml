@@ -35,3 +35,18 @@ jobs:
     - name: Typescript test
       run: npm run test
       working-directory: ./DotnetTemplate.Web
+
+    - name: Login to Docker Hub
+      uses: docker/login-action@v1
+      with:
+        username: ${{ secrets.jackt24 }}
+        password: ${{ secrets.aabb25cd-3f58-4def-a57b-975097fd8582}}
+
+    - name: Run Docker Build
+      run: docker build --tag hello .
+
+    - name: Change Tag 
+      run: docker tag hello jackt24/hello
+
+    - name: Push to docker
+      run: docker push jackt24/hello
